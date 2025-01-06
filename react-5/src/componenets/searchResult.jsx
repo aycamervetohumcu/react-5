@@ -1,11 +1,10 @@
-import React from "react";
-import "./searchResult.css";
-
-
-export const SearchResult = ({results}) => {
-    return <div className="search-result"onClick={(e)=> alert(`You clicked on ${results.name}`)}
-    >{results.name}</div>;
-          
-
-    
+export const SearchItem = ({data}) => {
+    return (
+        <div 
+            className="result-item" 
+            onClick={() => alert(`Selected: ${data.name}`)}
+        >
+            {data.name}
+        </div>
+    );
 };
